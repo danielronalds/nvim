@@ -1,4 +1,2 @@
--- Requring my configs
+-- Requiring my configs
 require("danielr")
-
-

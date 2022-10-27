@@ -15,4 +15,22 @@ return require('packer').startup(function(use)
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+
+    -- Completition
+    use "hrsh7th/nvim-cmp"
+    use "hrsh7th/cmp-buffer"
+    use "hrsh7th/cmp-path"
+    use "hrsh7th/cmp-cmdline"
+    use "saadparwaiz1/cmp_luasnip"
+    -- Snippets
+    use "L3MON4D3/LuaSnip"
+    use "rafamadriz/friendly-snippets"
+
+
+    -- Status bar
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
+
 end)
