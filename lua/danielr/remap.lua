@@ -11,3 +11,6 @@ nnoremap("<leader>sv", "<cmd>Vexplore<CR>")
 
 -- Open telescopes find files
 nnoremap("<leader>ff", "<cmd>Telescope find_files<CR>")
+
+-- Open up git status
+nnoremap("<leader>gs", "<cmd>Telescope git_status<CR>")
