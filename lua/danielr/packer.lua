@@ -10,10 +10,19 @@ return require('packer').startup(function(use)
     -- Themes
     use "gruvbox-community/gruvbox"
 
-    -- Telescope 
+    -- Fuzzyfinder(Telescope)
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
         requires = { {'nvim-lua/plenary.nvim'} }
+    }
+    
+    -- Harpoon
+    use "ThePrimeagen/harpoon"
+
+    -- Treesitter
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
     }
 
     -- Completition
@@ -26,6 +35,12 @@ return require('packer').startup(function(use)
     use "L3MON4D3/LuaSnip"
     use "rafamadriz/friendly-snippets"
 
+    -- LSP
+    use {
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
+        "neovim/nvim-lspconfig",
+    }
 
     -- Status bar
     use {

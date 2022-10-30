@@ -1,8 +1,9 @@
 -- Look and feel
--- vim.opt.termguicolors = true
+vim.opt.termguicolors = true
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.colorcolumn = "100"
+-- vim.cmd[[autocmd FileType rs set colorcolumn=100]]
 vim.opt.scrolloff = 10
 vim.opt.signcolumn = "yes"
 
