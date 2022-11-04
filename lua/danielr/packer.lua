@@ -22,6 +22,14 @@ return require('packer').startup(function(use)
         config = function() require("nvim-autopairs").setup {} end
     }
 
+    -- Git signs
+    use {
+        'lewis6991/gitsigns.nvim',
+        config = function()
+            require('gitsigns').setup()
+        end
+    }
+
     -- Harpoon
     use "ThePrimeagen/harpoon"
 
