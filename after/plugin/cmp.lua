@@ -111,6 +111,7 @@ cmp.setup {
   },
   -- The order of this determines what is shown first
   sources = {
+      { name = "nvim_lsp" },
       { name = "luasnip" },
       { name = "buffer" },
       { name = "path" },

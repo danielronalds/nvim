@@ -6,6 +6,7 @@ vim.opt.colorcolumn = "100"
 -- vim.cmd[[autocmd FileType rs set colorcolumn=100]]
 vim.opt.scrolloff = 10
 vim.opt.signcolumn = "yes"
+-- vim.opt.cursorline = true
 
 -- Indenting
 vim.opt.tabstop = 4

@@ -1,5 +1,6 @@
 local nnoremap = require("danielr.keymap").nnoremap
 
+
 -- Open netrw
 nnoremap("<leader>pv", "<cmd>Ex<CR>")
 
@@ -9,6 +10,17 @@ nnoremap("<leader>sh", "<cmd>Hex<CR>")
 -- Open a file vertically (split vertically)
 nnoremap("<leader>sv", "<cmd>Vex!<CR>")
 
+-- LSP
+-- Show Documentation
+nnoremap("K", "<cmd>lua vim.lsp.buf.hover()<CR>")
+-- Goto Definition
+nnoremap("gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
+-- Goto references
+nnoremap("gr", "<cmd>lua vim.lsp.buf.references()<CR>")
+-- LSP Format 
+nnoremap("<leader>lf", "<cmd>lua vim.lsp.buf.format()<CR>")
+
+-- Telescope
 -- Open telescopes find files
 nnoremap("<leader>ff", "<cmd>Telescope find_files<CR>")
 
