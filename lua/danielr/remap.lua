@@ -10,6 +10,11 @@ nnoremap("<leader>sh", "<cmd>Hex<CR>")
 -- Open a file vertically (split vertically)
 nnoremap("<leader>sv", "<cmd>Vex!<CR>")
 
+-- Vertical movements
+-- Centers the screen after Ctrl + D and Ctrl + U (theprimeagen tip)
+nnoremap("<C-d>", "<C-d>zz")
+nnoremap("<C-u>", "<C-u>zz")
+
 -- LSP
 -- Show Documentation
 nnoremap("K", "<cmd>lua vim.lsp.buf.hover()<CR>")
@@ -17,7 +22,7 @@ nnoremap("K", "<cmd>lua vim.lsp.buf.hover()<CR>")
 nnoremap("gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
 -- Goto references
 nnoremap("gr", "<cmd>lua vim.lsp.buf.references()<CR>")
--- LSP Format 
+-- LSP Format
 nnoremap("<leader>lf", "<cmd>lua vim.lsp.buf.format()<CR>")
 
 -- Telescope
@@ -29,6 +34,9 @@ nnoremap("<leader>lg", "<cmd>Telescope live_grep<CR>")
 
 -- Open up git status
 nnoremap("<leader>gs", "<cmd>Telescope git_status<CR>")
+
+-- Open LSP Diagnostics
+nnoremap("<leader>ld", "<cmd>Telescope diagnostics<CR>")
 
 -- Harpoon
 -- Showing menu
