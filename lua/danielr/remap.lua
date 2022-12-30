@@ -18,6 +18,10 @@ nnoremap("<C-u>", "<C-u>zz")
 -- LazyGit
 nnoremap("<leader>gg", "<cmd>LazyGit<CR>")
 
+-- Cargo shortcuts
+nnoremap("<leader>cr", "<cmd>!cargo run<CR>")
+nnoremap("<leader>ct", "<cmd>!cargo test<CR>")
+
 -- LSP
 -- Show Documentation
 nnoremap("K", "<cmd>lua vim.lsp.buf.hover()<CR>")
