@@ -15,6 +15,9 @@ nnoremap("<leader>sv", "<cmd>Vex!<CR>")
 nnoremap("<C-d>", "<C-d>zz")
 nnoremap("<C-u>", "<C-u>zz")
 
+-- LazyGit
+nnoremap("<leader>gg", "<cmd>LazyGit<CR>")
+
 -- LSP
 -- Show Documentation
 nnoremap("K", "<cmd>lua vim.lsp.buf.hover()<CR>")

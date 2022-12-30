@@ -40,6 +40,9 @@ return require('packer').startup(function(use)
         run = ':TSUpdate'
     }
 
+    -- LazyGit
+    use 'kdheepak/lazygit.nvim'
+
     -- Completition
     use "hrsh7th/nvim-cmp"
     use "hrsh7th/cmp-buffer"
