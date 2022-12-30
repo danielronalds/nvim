@@ -24,7 +24,8 @@ nnoremap("K", "<cmd>lua vim.lsp.buf.hover()<CR>")
 -- Goto Definition
 nnoremap("gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
 -- Goto references
-nnoremap("gr", "<cmd>lua vim.lsp.buf.references()<CR>")
+-- nnoremap("gr", "<cmd>lua vim.lsp.buf.references()<CR>")
+nnoremap("gr", "<cmd>Telescope lsp_references<CR>")
 -- LSP Format
 nnoremap("<leader>lf", "<cmd>lua vim.lsp.buf.format()<CR>")
 
