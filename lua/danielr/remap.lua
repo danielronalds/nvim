@@ -16,7 +16,9 @@ nnoremap("<C-d>", "<C-d>zz")
 nnoremap("<C-u>", "<C-u>zz")
 
 -- LazyGit
-nnoremap("<leader>gg", "<cmd>LazyGit<CR>")
+nnoremap("<leader>gs", "<cmd>LazyGit<CR>")
+-- Open up git status
+-- nnoremap("<leader>gs", "<cmd>Telescope git_status<CR>")
 
 -- Cargo shortcuts
 nnoremap("<leader>cr", "<cmd>!cargo run<CR>")
@@ -39,9 +41,6 @@ nnoremap("<leader>ff", "<cmd>Telescope find_files<CR>")
 
 -- Open telescopes live grep
 nnoremap("<leader>lg", "<cmd>Telescope live_grep<CR>")
-
--- Open up git status
-nnoremap("<leader>gs", "<cmd>Telescope git_status<CR>")
 
 -- Open LSP Diagnostics
 nnoremap("<leader>ld", "<cmd>Telescope diagnostics<CR>")
