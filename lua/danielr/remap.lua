@@ -23,6 +23,7 @@ nnoremap("<leader>gs", "<cmd>LazyGit<CR>")
 -- Cargo shortcuts
 nnoremap("<leader>cr", "<cmd>!cargo run<CR>")
 nnoremap("<leader>ct", "<cmd>!cargo test<CR>")
+nnoremap("<leader>cc", "<cmd>!cargo clippy<CR>")
 
 -- LSP
 -- Show Documentation
