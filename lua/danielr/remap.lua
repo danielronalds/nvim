@@ -16,9 +16,9 @@ nnoremap("<C-d>", "<C-d>zz")
 nnoremap("<C-u>", "<C-u>zz")
 
 -- LazyGit
-nnoremap("<leader>gs", "<cmd>LazyGit<CR>")
+nnoremap("<leader>gg", "<cmd>LazyGit<CR>")
 -- Open up git status
--- nnoremap("<leader>gs", "<cmd>Telescope git_status<CR>")
+nnoremap("<leader>gs", "<cmd>Telescope git_status<CR>")
 
 -- Cargo shortcuts
 nnoremap("<leader>cr", "<cmd>!cargo run<CR>")
