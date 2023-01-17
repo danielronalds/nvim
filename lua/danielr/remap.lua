@@ -22,8 +22,9 @@ nnoremap("<leader>gs", "<cmd>Telescope git_status<CR>")
 
 -- Cargo shortcuts
 nnoremap("<leader>cr", "<cmd>!cargo run<CR>")
-nnoremap("<leader>ct", "<cmd>!cargo test<CR>")
-nnoremap("<leader>cc", "<cmd>!cargo clippy<CR>")
+-- Float term so you get syntax highlighting for the results
+nnoremap("<leader>ct", "<cmd>FloatermNew --autoclose=0 cargo test<CR>")
+nnoremap("<leader>cc", "<cmd>FloatermNew --autoclose=0 cargo clippy<CR>")
 
 -- LSP
 -- Show Documentation

@@ -43,6 +43,9 @@ return require('packer').startup(function(use)
     -- LazyGit
     use 'kdheepak/lazygit.nvim'
 
+    -- FloatTerm
+    use 'voldikss/vim-floaterm'
+
     -- Completition
     use "hrsh7th/nvim-cmp"
     use "hrsh7th/cmp-buffer"
