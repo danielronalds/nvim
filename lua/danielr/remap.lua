@@ -21,10 +21,13 @@ nnoremap("<leader>gg", "<cmd>LazyGit<CR>")
 nnoremap("<leader>gs", "<cmd>Telescope git_status<CR>")
 
 -- Cargo shortcuts
-nnoremap("<leader>cr", "<cmd>!cargo run<CR>")
 -- Float term so you get syntax highlighting for the results
+nnoremap("<leader>cr", "<cmd>FloatermNew --autoclose=0 cargo run<CR>")
 nnoremap("<leader>ct", "<cmd>FloatermNew --autoclose=0 cargo test<CR>")
 nnoremap("<leader>cc", "<cmd>FloatermNew --autoclose=0 cargo clippy<CR>")
+
+-- Show Floating Term
+nnoremap("<leader>tt", "<cmd>FloatermNew<CR>")
 
 -- LSP
 -- Show Documentation
