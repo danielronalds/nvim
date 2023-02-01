@@ -6,8 +6,8 @@
 vim.g.neovide_scale_factor=1.1
 
 -- Setting the cursor trail length and size to 0 so I just get a smooth cursor
-vim.g.neovide_cursor_trail_size=0.0
-vim.g.neovide_cursor_trail_length=0.0
+vim.g.neovide_cursor_trail_size=0.15
+vim.g.neovide_cursor_trail_length=0.15
 
 -- Setting the frame rate
 vim.g.neovide_refresh_rate=90

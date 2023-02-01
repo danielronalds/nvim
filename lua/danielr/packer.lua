@@ -9,6 +9,7 @@ return require('packer').startup(function(use)
 
     -- Themes
     use "gruvbox-community/gruvbox"
+    use 'folke/tokyonight.nvim'
     use { "catppuccin/nvim", as = "catppuccin" }
 
     -- Fuzzyfinder(Telescope)

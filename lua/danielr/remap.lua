@@ -39,6 +39,8 @@ nnoremap("gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
 nnoremap("gr", "<cmd>Telescope lsp_references<CR>")
 -- LSP Format
 nnoremap("<leader>lf", "<cmd>lua vim.lsp.buf.format()<CR>")
+-- LSP Document Symbols
+nnoremap("<leader>ls", "<cmd>Telescope lsp_document_symbols<CR>")
 
 -- Telescope
 -- Open telescopes find files
