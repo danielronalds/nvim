@@ -24,7 +24,8 @@ wk.register({
         name = "Cargo Shortcuts",
         r = { "<cmd>FloatermNew --autoclose=0 cargo run<CR>", "Run cargo project" },
         t = { "<cmd>FloatermNew --autoclose=0 cargo test<CR>", "Run cargo test" },
-        c = { "<cmd>FloatermNew --autoclose=0 cargo clippy<CR>", "Run cargo clippy" },
+        -- c = { "<cmd>FloatermNew --autoclose=0 cargo clippy<CR>", "Run cargo clippy" },
+        c = { "<cmd> lua require('nvterm.terminal').send('bacon -j clippy', 'vertical')<CR>", "Run cargo clippy in bacon" }
     },
 
     g = {
@@ -34,7 +35,7 @@ wk.register({
     },
 
     t = {
-        name = "Floating terminal",
+        name = "Terminal",
         t = { "<cmd>FloatermNew<CR>", "Launch a floating terminal session" },
         h = { "<cmd> lua require('nvterm.terminal').new 'horizontal'<CR>", "Launch a horizontal terminal" },
         v = { "<cmd> lua require('nvterm.terminal').new 'vertical'<CR>", "Launch a vertical terminal" }
