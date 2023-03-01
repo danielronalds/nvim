@@ -78,6 +78,13 @@ return require('packer').startup(function(use)
 
     -- FloatTerm
     use 'voldikss/vim-floaterm'
+    -- nvterm
+    use {
+        "NvChad/nvterm",
+        config = function()
+            require("nvterm").setup()
+        end,
+    }
 
     -- Completition
     use "hrsh7th/nvim-cmp"

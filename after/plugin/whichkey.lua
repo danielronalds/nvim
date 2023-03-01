@@ -35,7 +35,9 @@ wk.register({
 
     t = {
         name = "Floating terminal",
-        t = { "<cmd>FloatermNew<CR>", "Launch a floating terminal session" }
+        t = { "<cmd>FloatermNew<CR>", "Launch a floating terminal session" },
+        h = { "<cmd> lua require('nvterm.terminal').new 'horizontal'<CR>", "Launch a horizontal terminal" },
+        v = { "<cmd> lua require('nvterm.terminal').new 'vertical'<CR>", "Launch a vertical terminal" }
     },
 
     l = {
