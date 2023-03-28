@@ -10,7 +10,7 @@ vim.opt.signcolumn = "yes"
 -- vim.opt.cursorline = true
 
 -- Spell Checking
-vim.opt.spell = true
+--vim.opt.spell = true
 
 -- Indenting
 vim.opt.tabstop = 4
