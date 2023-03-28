@@ -5,6 +5,7 @@ wk.register({
     p = {
         name = "Project View",
         v = { "<cmd>Ex<CR>", "Open project view in netrw" },
+        t = { "<cmd>FloatermNew --autoclose=0 tasks<CR>", "Display project tasks" },
     },
 
     f = {
