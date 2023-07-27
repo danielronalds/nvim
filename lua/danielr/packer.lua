@@ -11,6 +11,7 @@ return require('packer').startup(function(use)
     use "gruvbox-community/gruvbox"
     use 'folke/tokyonight.nvim'
     use { "catppuccin/nvim", as = "catppuccin" }
+    use "https://github.com/sainnhe/everforest"
 
     -- Fuzzyfinder(Telescope)
     use {
@@ -43,8 +44,7 @@ return require('packer').startup(function(use)
             }
         end
     }
-
-    -- alpha
+-- alpha
     use {
         'goolord/alpha-nvim',
         requires = { 'nvim-tree/nvim-web-devicons' },
