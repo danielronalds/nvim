@@ -1,2 +1,2 @@
 -- The gruvbox theme
-vim.cmd([[colorscheme gruvbox]])
+vim.cmd([[colorscheme onenord]])

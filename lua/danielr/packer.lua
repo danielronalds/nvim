@@ -12,6 +12,8 @@ return require('packer').startup(function(use)
     use 'folke/tokyonight.nvim'
     use { "catppuccin/nvim", as = "catppuccin" }
     use "https://github.com/sainnhe/everforest"
+    use 'shaunsingh/nord.nvim'
+    use 'rmehri01/onenord.nvim'
 
     -- Fuzzyfinder(Telescope)
     use {
@@ -44,12 +46,12 @@ return require('packer').startup(function(use)
             }
         end
     }
--- alpha
+    -- alpha
     use {
         'goolord/alpha-nvim',
         requires = { 'nvim-tree/nvim-web-devicons' },
-        config = function ()
-            require'alpha'.setup(require'alpha.themes.startify'.config)
+        config = function()
+            require 'alpha'.setup(require 'alpha.themes.startify'.config)
         end
     }
 
@@ -62,7 +64,7 @@ return require('packer').startup(function(use)
             require("which-key").setup {
                 window = {
                     border = "none",
-                    margin = { 0, 0, 0, 0 }, -- extra window margin [top, right, bottom, left]
+                    margin = { 0, 0, 0, 0 },  -- extra window margin [top, right, bottom, left]
                     padding = { 0, 0, 0, 0 }, -- extra window padding [top, right, bottom, left]
                 },
                 ignore_missing = true,
