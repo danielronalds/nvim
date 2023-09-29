@@ -15,4 +15,5 @@ lsp_zero.set_preferences(lsp_zero_config)
 -- Rust server
 require('lspconfig').rust_analyzer.setup({})
 
-
+-- Nix server
+require('lspconfig').nixd.setup({})
