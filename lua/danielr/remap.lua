@@ -46,9 +46,6 @@ nnoremap("<leader>ls", "<cmd>Telescope lsp_document_symbols<CR>")
 -- Open telescopes live grep
 nnoremap("<leader>lg", "<cmd>Telescope live_grep<CR>")
 
--- Open LSP Diagnostics
-nnoremap("<leader>ld", "<cmd>Telescope diagnostics<CR>")
-
 -- Harpoon
 -- Showing menu
 nnoremap("<leader>mm", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>")

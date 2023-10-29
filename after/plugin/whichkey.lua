@@ -40,8 +40,8 @@ wk.register({
     l = {
         name = "LSP Stuff",
         f = { "<cmd>lua vim.lsp.buf.format()<CR>", "Format file using LSP" },
-        s = { "<cmd>Telescope lsp_document_symbols<CR>", "View Document Symbols" },
-        d = { "<cmd>Telescope diagnostics<CR>", "View LSP Diagnostics" },
+        s = { "<cmd>Telescope lsp_document_symbols theme=dropdown<CR>", "View Document Symbols" },
+        d = { "<cmd>Telescope diagnostics theme=dropdown<CR>", "View LSP Diagnostics" },
     },
 
     m = {
