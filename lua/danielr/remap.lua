@@ -43,9 +43,6 @@ nnoremap("<leader>lf", "<cmd>lua vim.lsp.buf.format()<CR>")
 nnoremap("<leader>ls", "<cmd>Telescope lsp_document_symbols<CR>")
 
 -- Telescope
--- Open telescopes find files
-nnoremap("<leader>ff", "<cmd>Telescope find_files<CR>")
-
 -- Open telescopes live grep
 nnoremap("<leader>lg", "<cmd>Telescope live_grep<CR>")
 
