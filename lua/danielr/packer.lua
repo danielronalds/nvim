@@ -10,6 +10,9 @@ return require('packer').startup(function(use)
     -- Themes
     use 'rmehri01/onenord.nvim'
 
+    -- Icons
+    use 'nvim-tree/nvim-web-devicons'
+
     -- Fuzzyfinder(Telescope)
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
