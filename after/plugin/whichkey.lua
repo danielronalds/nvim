@@ -27,7 +27,7 @@ wk.register({
     g = {
         name = "Git Integration",
         g = { "<cmd>LazyGit<CR>", "Launch LazyGit in floating window" },
-        s = { "<cmd>Telescope git_status<CR>", "View git status with telescope" },
+        s = { "<cmd>Telescope git_status theme=dropdown<CR>", "View git status with telescope" },
     },
 
     t = {
