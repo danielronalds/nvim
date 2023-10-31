@@ -8,11 +8,6 @@ return require('packer').startup(function(use)
     use "wbthomason/packer.nvim"
 
     -- Themes
-    use "gruvbox-community/gruvbox"
-    use 'folke/tokyonight.nvim'
-    use { "catppuccin/nvim", as = "catppuccin" }
-    use "https://github.com/sainnhe/everforest"
-    use 'shaunsingh/nord.nvim'
     use 'rmehri01/onenord.nvim'
 
     -- Fuzzyfinder(Telescope)
@@ -35,17 +30,6 @@ return require('packer').startup(function(use)
         end
     }
 
-    -- Zen mode
-    use {
-        "folke/zen-mode.nvim",
-        config = function()
-            require("zen-mode").setup {
-                -- your configuration comes here
-                -- or leave it empty to use the default settings
-                -- refer to the configuration section below
-            }
-        end
-    }
     -- alpha
     use {
         'goolord/alpha-nvim',
@@ -113,10 +97,6 @@ return require('packer').startup(function(use)
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
         requires = {
-            --- Uncomment these if you want to manage LSP servers from neovim
-            -- {'williamboman/mason.nvim'},
-            -- {'williamboman/mason-lspconfig.nvim'},
-
             -- LSP Support
             {'neovim/nvim-lspconfig'},
             -- Autocompletion
