@@ -12,6 +12,9 @@ local lsp_zero_config = {
 
 lsp_zero.set_preferences(lsp_zero_config)
 
+-- Lua server
+require('lspconfig').lua_ls.setup({})
+
 -- Rust server
 require('lspconfig').rust_analyzer.setup({})
 
