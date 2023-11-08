@@ -20,3 +20,6 @@ require('lspconfig').rust_analyzer.setup({})
 
 -- Nix server
 require('lspconfig').nixd.setup({})
+
+-- Typescript
+require'lspconfig'.tsserver.setup{}
