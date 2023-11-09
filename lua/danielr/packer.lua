@@ -18,7 +18,7 @@ return require('packer').startup(function(use)
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
-    use {'stevearc/dressing.nvim'}
+    use { 'stevearc/dressing.nvim' }
 
     -- Autopairs
     use {
@@ -72,6 +72,12 @@ return require('packer').startup(function(use)
         run = ':TSUpdate'
     }
 
+    -- todo-comments
+    use {
+        "folke/todo-comments.nvim",
+        requires = { "nvim-lua/plenary.nvim" },
+    }
+
     -- LazyGit
     use 'kdheepak/lazygit.nvim'
 
@@ -102,11 +108,11 @@ return require('packer').startup(function(use)
         branch = 'v3.x',
         requires = {
             -- LSP Support
-            {'neovim/nvim-lspconfig'},
+            { 'neovim/nvim-lspconfig' },
             -- Autocompletion
-            {'hrsh7th/nvim-cmp'},
-            {'hrsh7th/cmp-nvim-lsp'},
-            {'L3MON4D3/LuaSnip'},
+            { 'hrsh7th/nvim-cmp' },
+            { 'hrsh7th/cmp-nvim-lsp' },
+            { 'L3MON4D3/LuaSnip' },
         }
     }
 

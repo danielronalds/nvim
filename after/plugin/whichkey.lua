@@ -3,8 +3,12 @@ local wk = require("which-key")
 
 wk.register({
     p = {
-        name = "Project View",
+        name = "Project Management",
+        -- Project problems
+        p = {"<cmd>TodoTelescope theme=dropdown<CR>", "Open Todo Comments in telescope"},
+        -- Project View
         v = { "<cmd>Ex<CR>", "Open project view in netrw" },
+        -- Project Tasks
         t = { "<cmd>FloatermNew --autoclose=0 tasks<CR>", "Display project tasks" },
     },
 
