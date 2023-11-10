@@ -8,18 +8,17 @@ return require('packer').startup(function(use)
     use "wbthomason/packer.nvim"
 
     -- Themes
-    use "gruvbox-community/gruvbox"
-    use 'folke/tokyonight.nvim'
-    use { "catppuccin/nvim", as = "catppuccin" }
-    use "https://github.com/sainnhe/everforest"
-    use 'shaunsingh/nord.nvim'
     use 'rmehri01/onenord.nvim'
+
+    -- Icons
+    use 'nvim-tree/nvim-web-devicons'
 
     -- Fuzzyfinder(Telescope)
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
+    use { 'stevearc/dressing.nvim' }
 
     -- Autopairs
     use {
@@ -35,17 +34,6 @@ return require('packer').startup(function(use)
         end
     }
 
-    -- Zen mode
-    use {
-        "folke/zen-mode.nvim",
-        config = function()
-            require("zen-mode").setup {
-                -- your configuration comes here
-                -- or leave it empty to use the default settings
-                -- refer to the configuration section below
-            }
-        end
-    }
     -- alpha
     use {
         'goolord/alpha-nvim',
@@ -84,6 +72,12 @@ return require('packer').startup(function(use)
         run = ':TSUpdate'
     }
 
+    -- todo-comments
+    use {
+        "folke/todo-comments.nvim",
+        requires = { "nvim-lua/plenary.nvim" },
+    }
+
     -- LazyGit
     use 'kdheepak/lazygit.nvim'
 
@@ -110,9 +104,16 @@ return require('packer').startup(function(use)
 
     -- LSP
     use {
-        "williamboman/mason.nvim",
-        "williamboman/mason-lspconfig.nvim",
-        "neovim/nvim-lspconfig",
+        'VonHeikemen/lsp-zero.nvim',
+        branch = 'v3.x',
+        requires = {
+            -- LSP Support
+            { 'neovim/nvim-lspconfig' },
+            -- Autocompletion
+            { 'hrsh7th/nvim-cmp' },
+            { 'hrsh7th/cmp-nvim-lsp' },
+            { 'L3MON4D3/LuaSnip' },
+        }
     }
 
     -- Status bar

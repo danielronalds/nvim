@@ -3,17 +3,16 @@ local wk = require("which-key")
 
 wk.register({
     p = {
-        name = "Project View",
+        name = "Project Management",
+        -- Project problems
+        p = {"<cmd>TodoTelescope theme=dropdown<CR>", "Open Todo Comments in telescope"},
+        -- Project View
         v = { "<cmd>Ex<CR>", "Open project view in netrw" },
+        -- Project Tasks
         t = { "<cmd>FloatermNew --autoclose=0 tasks<CR>", "Display project tasks" },
     },
 
-    f = {
-        name = "Find",
-        f = { "<cmd>Telescope find_files<cr>", "Find File" },
-        g = { "<cmd>Telescope git_files<cr>", "Find Git Files" },
-        w = { "<cmd>Telescope live_grep<CR>", "Find Word using Live Grep" }
-    },
+    f = { "<cmd>Telescope git_files theme=dropdown<cr>", "Find Git Files" },
 
     s = {
         name = "Splits",
@@ -32,7 +31,7 @@ wk.register({
     g = {
         name = "Git Integration",
         g = { "<cmd>LazyGit<CR>", "Launch LazyGit in floating window" },
-        s = { "<cmd>Telescope git_status<CR>", "View git status with telescope" },
+        s = { "<cmd>Telescope git_status theme=dropdown<CR>", "View git status with telescope" },
     },
 
     t = {
@@ -45,8 +44,8 @@ wk.register({
     l = {
         name = "LSP Stuff",
         f = { "<cmd>lua vim.lsp.buf.format()<CR>", "Format file using LSP" },
-        s = { "<cmd>Telescope lsp_document_symbols<CR>", "View Document Symbols" },
-        d = { "<cmd>Telescope diagnostics<CR>", "View LSP Diagnostics" },
+        s = { "<cmd>Telescope lsp_document_symbols theme=dropdown<CR>", "View Document Symbols" },
+        d = { "<cmd>Telescope diagnostics theme=dropdown<CR>", "View LSP Diagnostics" },
     },
 
     m = {
