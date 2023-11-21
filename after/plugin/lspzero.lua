@@ -18,6 +18,9 @@ require('lspconfig').lua_ls.setup({})
 -- Rust server
 require('lspconfig').rust_analyzer.setup({})
 
+-- C/C++ server
+require('lspconfig').clangd.setup({})
+
 -- Nix server
 require('lspconfig').nixd.setup({})
 
