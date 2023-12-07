@@ -44,12 +44,7 @@ return require('packer').startup(function(use)
     }
 
     -- oil
-    use {
-        "stevearc/oil.nvim",
-        config = function()
-            require("oil").setup()
-        end,
-    }
+    use { "stevearc/oil.nvim" }
 
     -- WhichKey
     use {

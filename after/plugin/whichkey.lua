@@ -7,7 +7,7 @@ wk.register({
         -- Project problems
         p = {"<cmd>TodoTelescope theme=dropdown<CR>", "Open Todo Comments in telescope"},
         -- Project View
-        v = { "<cmd>Ex<CR>", "Open project view in netrw" },
+        v = { "<cmd>Oil<CR>", "Open project view in oil" },
         -- Project Tasks
         t = { "<cmd>FloatermNew --autoclose=0 tasks<CR>", "Display project tasks" },
     },
@@ -16,8 +16,8 @@ wk.register({
 
     s = {
         name = "Splits",
-        h = { "<cmd>Hex<cr>", "Split Horizontally" }, -- create a binding with label
-        v = { "<cmd>Vex!<cr>", "Split Vertically" }, -- create a binding with label
+        h = { "<cmd>lua vim.cmd('split | wincmd j'); require('oil').open()<cr>", "Open Oil Horizontally" }, -- create a binding with label
+        v = { "<cmd>lua vim.cmd('vsplit | wincmd l'); require('oil').open()<cr>", "Open Oil Vertically" }, -- create a binding with label
     },
 
     c = {
