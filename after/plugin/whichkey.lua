@@ -12,7 +12,7 @@ wk.register({
         t = { "<cmd>FloatermNew --autoclose=0 tasks<CR>", "Display project tasks" },
     },
 
-    f = { "<cmd>Telescope git_files theme=dropdown<cr>", "Find Git Files" },
+    f = { "<cmd>Telescope find_files theme=dropdown<cr>", "Find Files" },
 
     s = {
         name = "Splits",
