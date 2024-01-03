@@ -25,4 +25,7 @@ require('lspconfig').clangd.setup({})
 require('lspconfig').nixd.setup({})
 
 -- Typescript
-require'lspconfig'.tsserver.setup{}
+require('lspconfig').tsserver.setup{}
+
+-- Tailwind CSS
+require('lspconfig').tailwindcss.setup{}
