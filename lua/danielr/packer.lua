@@ -46,6 +46,9 @@ return require('packer').startup(function(use)
     -- oil
     use { "stevearc/oil.nvim" }
 
+    -- NVIM tree
+    use { "nvim-tree/nvim-tree.lua" }
+
     -- WhichKey
     use {
         "folke/which-key.nvim",

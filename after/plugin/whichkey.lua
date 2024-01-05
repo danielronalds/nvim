@@ -8,6 +8,8 @@ wk.register({
         p = {"<cmd>TodoTelescope theme=dropdown<CR>", "Open Todo Comments in telescope"},
         -- Project View
         v = { "<cmd>Oil<CR>", "Open project view in oil" },
+        -- Project Files
+        f = { "<cmd>NvimTreeToggle<CR>", "Toggle NvimTree" },
         -- Project Tasks
         t = { "<cmd>FloatermNew --autoclose=0 tasks<CR>", "Display project tasks" },
     },
