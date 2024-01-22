@@ -9,6 +9,7 @@ return require('packer').startup(function(use)
 
     -- Themes
     use 'rmehri01/onenord.nvim'
+    use { "catppuccin/nvim", as = "catppuccin" }
 
     -- Icons
     use 'nvim-tree/nvim-web-devicons'
