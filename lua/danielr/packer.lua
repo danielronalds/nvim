@@ -10,6 +10,7 @@ return require('packer').startup(function(use)
     -- Themes
     use 'rmehri01/onenord.nvim'
     use { "catppuccin/nvim", as = "catppuccin" }
+    use "folke/tokyonight.nvim"
 
     -- Icons
     use 'nvim-tree/nvim-web-devicons'

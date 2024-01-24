@@ -218,6 +218,11 @@ _G.packer_plugins = {
     path = "/home/danielr/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
     url = "https://github.com/folke/todo-comments.nvim"
   },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/home/danielr/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
+  },
   ["vim-floaterm"] = {
     loaded = true,
     path = "/home/danielr/.local/share/nvim/site/pack/packer/start/vim-floaterm",
