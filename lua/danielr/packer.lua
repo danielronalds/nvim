@@ -11,6 +11,7 @@ return require('packer').startup(function(use)
     use 'rmehri01/onenord.nvim'
     use { "catppuccin/nvim", as = "catppuccin" }
     use "folke/tokyonight.nvim"
+    use { "ellisonleao/gruvbox.nvim" }
 
     -- Icons
     use 'nvim-tree/nvim-web-devicons'
