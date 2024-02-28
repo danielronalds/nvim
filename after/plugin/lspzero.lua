@@ -21,6 +21,9 @@ require('lspconfig').rust_analyzer.setup({})
 -- C/C++ server
 require('lspconfig').clangd.setup({})
 
+-- Python 3 server
+require("lspconfig").pylsp.setup({})
+
 -- Nix server
 require('lspconfig').nixd.setup({})
 
