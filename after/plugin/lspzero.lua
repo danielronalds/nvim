@@ -27,6 +27,8 @@ require('lspconfig').clangd.setup({})
 -- Python 3 server
 require("lspconfig").pylsp.setup({})
 
+require("lspconfig").gopls.setup({})
+
 -- Nix server
 require('lspconfig').nixd.setup({})
 
