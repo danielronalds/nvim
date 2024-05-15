@@ -32,6 +32,7 @@ wk.register({
 
     g = {
         name = "Git Integration",
+        b = { "<cmd>Gitsigns toggle_current_line_blame<CR>", "Toggle current line blame" },
         g = { "<cmd>LazyGit<CR>", "Launch LazyGit in floating window" },
         s = { "<cmd>Telescope git_status theme=dropdown<CR>", "View git status with telescope" },
     },
