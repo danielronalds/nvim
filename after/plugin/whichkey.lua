@@ -15,6 +15,7 @@ wk.register({
     },
 
     f = { "<cmd>Telescope find_files theme=dropdown<cr>", "Find Files" },
+    b = { "<cmd>Telescope buffers theme=dropdown<cr>", "Open buffers"},
 
     s = {
         name = "Splits",
