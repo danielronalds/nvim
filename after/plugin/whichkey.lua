@@ -45,6 +45,14 @@ wk.register({
         v = { "<cmd> lua require('nvterm.terminal').new 'vertical'<CR>", "Launch a vertical terminal" }
     },
 
+    o = {
+        name = "Open",
+        -- Terminal Keybinds
+        t = { "<cmd>lua require('nvterm.terminal').toggle 'horizontal'<CR>", "Terminal" },
+        T = { "<cmd>lua require('nvterm.terminal').toggle 'vertical'<CR>", "Verticle Terminal" },
+        p = { "<cmd>NvimTreeFocus<CR>", "Project Tree"}
+    },
+
     l = {
         name = "LSP Stuff",
         f = { "<cmd>lua vim.lsp.buf.format()<CR>", "Format file using LSP" },
