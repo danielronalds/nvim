@@ -32,6 +32,9 @@ require("lspconfig").gopls.setup({})
 -- Nix server
 require('lspconfig').nixd.setup({})
 
+-- Haskell
+require('lspconfig').hls.setup({})
+
 -- Typescript
 require('lspconfig').tsserver.setup{}
 
