@@ -98,9 +98,6 @@ return require('packer').startup(function(use)
     -- nvterm
     use {
         "NvChad/nvterm",
-        config = function()
-            require("nvterm").setup()
-        end,
     }
 
     -- Completition
