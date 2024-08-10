@@ -14,6 +14,9 @@ nnoremap("gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
 -- Goto references
 nnoremap("gr", "<cmd>Telescope lsp_references theme=dropdown<CR>")
 
+-- Escaping the terminal
+vim.api.nvim_set_keymap('t','<C-x>',  '<C-\\><C-n>',  {noremap = true})
+
 -- Switching to specific marks
 nnoremap("<leader>1", "<cmd>:lua require('harpoon.ui').nav_file(1)<CR>")
 nnoremap("<leader>2", "<cmd>:lua require('harpoon.ui').nav_file(2)<CR>")
