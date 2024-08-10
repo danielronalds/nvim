@@ -1,72 +1,36 @@
 -- Contains all my keybindings, translated into whichkey
 local wk = require("which-key")
 
-wk.register({
-    p = {
-        name = "Project Management",
-        -- Project problems
-        p = {"<cmd>TodoTelescope theme=dropdown<CR>", "Open Todo Comments in telescope"},
-        -- Project View
-        v = { "<cmd>Oil<CR>", "Open project view in oil" },
-        -- Project Files
-        f = { "<cmd>NvimTreeToggle<CR>", "Toggle NvimTree" },
-        -- Project Tasks
-        t = { "<cmd>FloatermNew --autoclose=0 tasks<CR>", "Display project tasks" },
-    },
+wk.setup {}
 
-    f = { "<cmd>Telescope find_files theme=dropdown<cr>", "Find Files" },
-    b = { "<cmd>Telescope buffers theme=dropdown<cr>", "Open buffers"},
-
-    s = {
-        name = "Splits",
-        h = { "<cmd>lua vim.cmd('split | wincmd j'); require('oil').open()<cr>", "Open Oil Horizontally" }, -- create a binding with label
-        v = { "<cmd>lua vim.cmd('vsplit | wincmd l'); require('oil').open()<cr>", "Open Oil Vertically" }, -- create a binding with label
-    },
-
-    c = {
-        name = "Cargo Shortcuts",
-        r = { "<cmd>FloatermNew --autoclose=0 cargo run<CR>", "Run cargo project" },
-        t = { "<cmd>FloatermNew --autoclose=0 cargo test<CR>", "Run cargo test" },
-        -- c = { "<cmd>FloatermNew --autoclose=0 cargo clippy<CR>", "Run cargo clippy" },
-        c = { "<cmd> lua require('nvterm.terminal').send('bacon -j clippy', 'vertical')<CR>", "Run cargo clippy in bacon" }
-    },
-
-    g = {
-        name = "Git Integration",
-        b = { "<cmd>Gitsigns toggle_current_line_blame<CR>", "Toggle current line blame" },
-        g = { "<cmd>LazyGit<CR>", "Launch LazyGit in floating window" },
-        s = { "<cmd>Telescope git_status theme=dropdown<CR>", "View git status with telescope" },
-    },
-
-    t = {
-        name = "Terminal",
-        t = { "<cmd>FloatermNew<CR>", "Launch a floating terminal session" },
-        h = { "<cmd> lua require('nvterm.terminal').new 'horizontal'<CR>", "Launch a horizontal terminal" },
-        v = { "<cmd> lua require('nvterm.terminal').new 'vertical'<CR>", "Launch a vertical terminal" }
-    },
-
-    o = {
-        name = "Open",
-        -- Terminal Keybinds
-        t = { "<cmd>lua require('nvterm.terminal').toggle 'horizontal'<CR>", "Terminal" },
-        T = { "<cmd>lua require('nvterm.terminal').toggle 'vertical'<CR>", "Verticle Terminal" },
-        p = { "<cmd>NvimTreeFocus<CR>", "Project Tree"}
-    },
-
-    l = {
-        name = "LSP Stuff",
-        f = { "<cmd>lua vim.lsp.buf.format()<CR>", "Format file using LSP" },
-        s = { "<cmd>Telescope lsp_document_symbols theme=dropdown<CR>", "View Document Symbols" },
-        d = { "<cmd>Telescope diagnostics theme=dropdown<CR>", "View LSP Diagnostics" },
-        g = { "<cmd>Telescope live_grep<CR>", "Live grep with Telescope" },
-    },
-
-    m = {
-        name = "Harpoon",
-        m = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>", "Open Marks Menu" },
-        a = { "<cmd>lua require('harpoon.mark').add_file()<CR>", "Add the current file" },
-        n = { "<cmd>lua require('harpoon.ui').nav_next()<CR>", "Go to next marked file" },
-        p = { "<cmd>lua require('harpoon.ui').nav_prev()<CR>", "Go to previous marked file" }
-    },
-
-}, { prefix = "<leader>" })
+wk.add({
+    mode = { "n", "v" },
+    { "<leader>b",  "<cmd>Telescope buffers theme=dropdown<cr>",                        desc = "Find Buffer" },
+    { "<leader>f",  "<cmd>Telescope find_files theme=dropdown<cr>",                     desc = "Find Files" },
+    { "<leader>t",  "<cmd>FloatermNew<CR>",                                             desc = "Open Floating Terminal" },
+    { "<leader>o",  group = "Open" },
+    { "<leader>ot", "<cmd>lua require('nvterm.terminal').toggle 'horizontal'<CR>",      desc = "Open Horizontal Terminal" },
+    { "<leader>oT", "<cmd>lua require('nvterm.terminal').toggle 'vertical'<CR>",        desc = "Open Vertical Terminal" },
+    { "<leader>op", "<cmd>NvimTreeFocus<CR>",                                           desc = "Focus Project Tree" },
+    { "<leader>p",  group = "Project Management" },
+    { "<leader>pp", "<cmd>TodoTelescope theme=dropdown<CR>",                            desc = "Open Project Todos" },
+    { "<leader>pv", "<cmd>Oil<CR>",                                                     desc = "Open Oil" },
+    { "<leader>pt", "<cmd>FloatermNew --autoclose=0 tasks<CR>",                         desc = "Open Project Tasks" },
+    { "<leader>s",  group = "Splits" },
+    { "<leader>sv", "<cmd>lua vim.cmd('vsplit | wincmd l'); require('oil').open()<cr>", desc = "Split Vertically" },
+    { "<leader>sh", "<cmd>lua vim.cmd('split | wincmd j'); require('oil').open()<cr>",  desc = "Split Horizontally" },
+    { "<leader>m",  group = "Harpoon" },
+    { "<leader>mp", "<cmd>lua require('harpoon.ui').nav_prev()<CR>",                    desc = "Move to previous mark" },
+    { "<leader>mn", "<cmd>lua require('harpoon.ui').nav_next()<CR>",                    desc = "Move to next mark" },
+    { "<leader>mm", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>",           desc = "Open Harpoon Menu" },
+    { "<leader>ma", "<cmd>lua require('harpoon.mark').add_file()<CR>",                  desc = "Add file to marks" },
+    { "<leader>g",  group = "Git Integration" },
+    { "<leader>gb", "<cmd>Gitsigns toggle_current_line_blame<CR>",                      desc = "Toggle current line blame" },
+    { "<leader>gs", "<cmd>Telescope git_status theme=dropdown<CR>",                     desc = "Open Git Status in Telescope" },
+    { "<leader>gg", "<cmd>LazyGit<CR>",                                                 desc = "Open LazyGit" },
+    { "<leader>l",  group = "LSP Stuff" },
+    { "<leader>lf", "<cmd>lua vim.lsp.buf.format()<CR>",                                desc = "Format Buffer" },
+    { "<leader>ld", "<cmd>Telescope diagnostics theme=dropdown<CR>",                    desc = "Open diagnostics in Telescope" },
+    { "<leader>lg", "<cmd>Telescope live_grep<CR>",                                     desc = "Open live grep" },
+    { "<leader>ls", "<cmd>Telescope lsp_document_symbols theme=dropdown<CR>",           desc = "Open Symbols in Telescope" },
+})

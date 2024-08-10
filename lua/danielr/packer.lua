@@ -58,21 +58,7 @@ return require('packer').startup(function(use)
     -- WhichKey
     use {
         "folke/which-key.nvim",
-        config = function()
-            vim.o.timeout = true
-            vim.o.timeoutlen = 300
-            require("which-key").setup {
-                window = {
-                    border = "none",
-                    margin = { 0, 0, 0, 0 },  -- extra window margin [top, right, bottom, left]
-                    padding = { 0, 0, 0, 0 }, -- extra window padding [top, right, bottom, left]
-                },
-                ignore_missing = true,
-
-                -- Hides the marks keybinding
-                hidden = { "require" }
-            }
-        end
+        requires = { {"echasnovski/mini.icons"} }
     }
 
     -- Harpoon

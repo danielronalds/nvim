@@ -6,15 +6,6 @@ local nnoremap = require("danielr.keymap").nnoremap
 nnoremap("<C-d>", "<C-d>zz")
 nnoremap("<C-u>", "<C-u>zz")
 
--- Cargo shortcuts
--- Float term so you get syntax highlighting for the results
-nnoremap("<leader>cr", "<cmd>FloatermNew --autoclose=0 cargo run<CR>")
-nnoremap("<leader>ct", "<cmd>FloatermNew --autoclose=0 cargo test<CR>")
-nnoremap("<leader>cc", "<cmd>FloatermNew --autoclose=0 cargo clippy<CR>")
-
--- Show Floating Term
-nnoremap("<leader>tt", "<cmd>FloatermNew<CR>")
-
 -- LSP
 -- Show Documentation
 nnoremap("K", "<cmd>lua vim.lsp.buf.hover()<CR>")
