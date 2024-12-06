@@ -38,5 +38,7 @@ require('lspconfig').hls.setup({})
 -- Typescript
 require('lspconfig').tsserver.setup{}
 
+require('lspconfig').pylsp.setup{}
+
 -- Tailwind CSS
 require('lspconfig').tailwindcss.setup{}
