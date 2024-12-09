@@ -24,9 +24,7 @@ require('lspconfig').slint_lsp.setup({})
 -- C/C++ server
 require('lspconfig').clangd.setup({})
 
--- Python 3 server
-require("lspconfig").pylsp.setup({})
-
+-- Go server
 require("lspconfig").gopls.setup({})
 
 -- Nix server
@@ -35,10 +33,11 @@ require('lspconfig').nixd.setup({})
 -- Haskell
 require('lspconfig').hls.setup({})
 
--- Typescript
-require('lspconfig').tsserver.setup{}
+-- Typescript server
+require('lspconfig').ts_ls.setup{}
 
-require('lspconfig').pylsp.setup{}
+-- Python 3 server
+require('lspconfig').pyright.setup{}
 
 -- Tailwind CSS
 require('lspconfig').tailwindcss.setup{}
