@@ -76,6 +76,18 @@ return require('packer').startup(function(use)
         requires = { "nvim-lua/plenary.nvim" },
     }
 
+    -- Debugging
+    use {
+        "mfussenegger/nvim-dap",
+        requires = {
+            {'leoluz/nvim-dap-go'},
+            {'rcarriga/nvim-dap-ui'},
+            {'theHamsta/nvim-dap-virtual-text'},
+            {'nvim-neotest/nvim-nio'},
+            {'williamboman/mason.nvim'},
+        }
+    }
+
     -- LazyGit
     use 'kdheepak/lazygit.nvim'
 

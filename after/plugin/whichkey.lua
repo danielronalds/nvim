@@ -33,4 +33,12 @@ wk.add({
     { "<leader>ld", "<cmd>Telescope diagnostics theme=ivy<CR>",                    desc = "Open diagnostics in Telescope" },
     { "<leader>lg", "<cmd>Telescope live_grep<CR>",                                     desc = "Open live grep" },
     { "<leader>ls", "<cmd>Telescope lsp_document_symbols theme=ivy<CR>",           desc = "Open Symbols in Telescope" },
+    { "<leader>d",  group = "Debugging" },
+    { "<leader>db", "<cmd>lua require('dap').toggle_breakpoint()<CR>",           desc = "Set Breakpoint" },
+    { "<leader>?", "<cmd>lua require('dapui').eval(nil, { enter = true })<CR>",           desc = "Evaluate Value" },
+    { "<leader>dc", "<cmd>lua require('dap').continue()<CR>",           desc = "Dap Continue" },
+    { "<leader>di", "<cmd>lua require('dap').step_into()<CR>",           desc = "Dap Step Into" },
+    { "<leader>do", "<cmd>lua require('dap').step_over()<CR>",           desc = "Dap Step Over" },
+    { "<leader>du", "<cmd>lua require('dap').step_out()<CR>",           desc = "Dap Step Out" },
+    { "<leader>dr", "<cmd>lua require('dap').restart()<CR>",           desc = "Dap Restart" },
 })
