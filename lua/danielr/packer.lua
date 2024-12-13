@@ -8,7 +8,6 @@ return require('packer').startup(function(use)
     use "wbthomason/packer.nvim"
 
     -- Themes
-    use 'rmehri01/onenord.nvim'
     use { "catppuccin/nvim", as = "catppuccin" }
     use "folke/tokyonight.nvim"
     use { "ellisonleao/gruvbox.nvim" }
@@ -81,6 +80,7 @@ return require('packer').startup(function(use)
         "mfussenegger/nvim-dap",
         requires = {
             {'leoluz/nvim-dap-go'},
+            {'mfussenegger/nvim-dap-python'},
             {'rcarriga/nvim-dap-ui'},
             {'theHamsta/nvim-dap-virtual-text'},
             {'nvim-neotest/nvim-nio'},
