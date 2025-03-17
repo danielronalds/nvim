@@ -81,6 +81,8 @@ return require('packer').startup(function(use)
         requires = {
             {'leoluz/nvim-dap-go'},
             {'mfussenegger/nvim-dap-python'},
+            {'mrcjkb/rustaceanvim'},
+            {'linux-cultist/venv-selector.nvim', branch='regexp'},
             {'rcarriga/nvim-dap-ui'},
             {'theHamsta/nvim-dap-virtual-text'},
             {'nvim-neotest/nvim-nio'},

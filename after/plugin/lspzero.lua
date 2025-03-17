@@ -15,11 +15,8 @@ lsp_zero.set_preferences(lsp_zero_config)
 -- Lua server
 require('lspconfig').lua_ls.setup({})
 
--- Rust server
-require('lspconfig').rust_analyzer.setup({})
-
--- Slint server
-require('lspconfig').slint_lsp.setup({})
+-- Rust server (Done by rust-tools)
+--require('lspconfig').rust_analyzer.setup({}) 
 
 -- C/C++ server
 require('lspconfig').clangd.setup({})
