@@ -1,6 +1,10 @@
 local nnoremap = require("danielr.keymap").nnoremap
 
 
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+
 -- Vertical movements
 -- Centers the screen after Ctrl + D and Ctrl + U (theprimeagen tip)
 nnoremap("<C-d>", "<C-d>zz")
