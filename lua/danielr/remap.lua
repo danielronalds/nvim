@@ -1,5 +1,4 @@
-local nnoremap = require("danielr.keymap").nnoremap
-
+--local harpoon = require('harpoon.ui')
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -7,28 +6,26 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Vertical movements
 -- Centers the screen after Ctrl + D and Ctrl + U (theprimeagen tip)
-nnoremap("<C-d>", "<C-d>zz")
-nnoremap("<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-d>", "<C-d>zz'")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 -- LSP
 -- Show Documentation
-nnoremap("K", "<cmd>lua vim.lsp.buf.hover()<CR>")
+vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end)
 -- Goto Definition
-nnoremap("gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
--- Goto references
-nnoremap("gr", "<cmd>Telescope lsp_references theme=dropdown<CR>")
+vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end)
 
--- Escaping the terminal
-vim.api.nvim_set_keymap('t','<C-x>',  '<C-\\><C-n>',  {noremap = true})
+-- Goto references
+--nnoremap("gr", "<cmd>Telescope lsp_references theme=dropdown<CR>")
 
 -- Switching to specific marks
-nnoremap("<leader>1", "<cmd>:lua require('harpoon.ui').nav_file(1)<CR>")
-nnoremap("<leader>2", "<cmd>:lua require('harpoon.ui').nav_file(2)<CR>")
-nnoremap("<leader>3", "<cmd>:lua require('harpoon.ui').nav_file(3)<CR>")
-nnoremap("<leader>4", "<cmd>:lua require('harpoon.ui').nav_file(4)<CR>")
-nnoremap("<leader>5", "<cmd>:lua require('harpoon.ui').nav_file(5)<CR>")
-nnoremap("<leader>6", "<cmd>:lua require('harpoon.ui').nav_file(6)<CR>")
-nnoremap("<leader>7", "<cmd>:lua require('harpoon.ui').nav_file(7)<CR>")
-nnoremap("<leader>8", "<cmd>:lua require('harpoon.ui').nav_file(8)<CR>")
-nnoremap("<leader>9", "<cmd>:lua require('harpoon.ui').nav_file(9)<CR>")
-nnoremap("<leader>0", "<cmd>:lua require('harpoon.ui').nav_file(0)<CR>")
+--vim.keymap.set("n", "<leader>1", function() harpoon.nav_file(1) end)
+--vim.keymap.set("n", "<leader>2", function() harpoon.nav_file(2) end)
+--vim.keymap.set("n", "<leader>3", function() harpoon.nav_file(3) end)
+--vim.keymap.set("n", "<leader>4", function() harpoon.nav_file(4) end)
+--vim.keymap.set("n", "<leader>5", function() harpoon.nav_file(5) end)
+--vim.keymap.set("n", "<leader>6", function() harpoon.nav_file(6) end)
+--vim.keymap.set("n", "<leader>7", function() harpoon.nav_file(7) end)
+--vim.keymap.set("n", "<leader>8", function() harpoon.nav_file(8) end)
+--vim.keymap.set("n", "<leader>9", function() harpoon.nav_file(9) end)
+--vim.keymap.set("n", "<leader>0", function() harpoon.nav_file(0) end)

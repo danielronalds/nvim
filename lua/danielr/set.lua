@@ -3,13 +3,9 @@ vim.opt.termguicolors = true
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.colorcolumn = "100"
---vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 vim.opt.signcolumn = "yes"
--- vim.opt.cursorline = true
 
--- Spell Checking
---vim.opt.spell = true
 
 -- Indenting
 vim.opt.tabstop = 4
