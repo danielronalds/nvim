@@ -6,8 +6,8 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Vertical movements
 -- Centers the screen after Ctrl + D and Ctrl + U (theprimeagen tip)
-vim.keymap.set("n", "<C-d>", "<C-d>zz'")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
 
 -- LSP
 -- Show Documentation
