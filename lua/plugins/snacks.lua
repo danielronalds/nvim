@@ -16,11 +16,10 @@ return {
         input = { enabled = true },
         layout = { enabled = false },
         lazygit = { enabled = false },
-        notifier = { enabled = false },
+        notifier = { enabled = true },
         picker = { enabled = true },
         profiler = { enabled = false },
         quickfile = { enabled = false },
-        -- TODO: Look into this
         rename = { enabled = false },
         scope = { enabled = false },
         scratch = { enabled = false },
