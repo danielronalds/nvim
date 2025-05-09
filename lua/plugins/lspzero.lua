@@ -20,31 +20,36 @@ return {
 
         lsp_zero.set_preferences(lsp_zero_config)
 
+        local lspconfig = require("lspconfig")
+
         -- Lua server
-        require('lspconfig').lua_ls.setup({})
+        lspconfig.lua_ls.setup({})
 
         -- Rust server (Done by rust-tools)
-        --require('lspconfig').rust_analyzer.setup({})
+        lspconfig.rust_analyzer.setup({})
 
         -- C/C++ server
-        require('lspconfig').clangd.setup({})
+        lspconfig.clangd.setup({})
 
         -- Go server
-        require("lspconfig").gopls.setup({})
+        lspconfig.gopls.setup({})
 
         -- Nix server
-        require('lspconfig').nixd.setup({})
+        lspconfig.nixd.setup({})
 
         -- Haskell
-        require('lspconfig').hls.setup({})
+        lspconfig.hls.setup({})
 
         -- Typescript server
-        require('lspconfig').ts_ls.setup {}
+        lspconfig.ts_ls.setup({})
 
         -- Python 3 server
-        require('lspconfig').pyright.setup {}
+        lspconfig.pyright.setup({})
+
+        -- Java
+        lspconfig.jdtls.setup({})
 
         -- Tailwind CSS
-        require('lspconfig').tailwindcss.setup {}
+        lspconfig.tailwindcss.setup({})
     end
 }
