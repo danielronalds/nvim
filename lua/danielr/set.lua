@@ -6,7 +6,6 @@ vim.opt.colorcolumn = "100"
 vim.opt.scrolloff = 10
 vim.opt.signcolumn = "yes"
 
-
 -- Indenting
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
