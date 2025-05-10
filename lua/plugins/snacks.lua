@@ -3,23 +3,45 @@ return {
     priority = 1000,
     lazy = false,
     opts = {
-        bigfile = { enabled = false },
+        bigfile = {
+            enabled = true
+        },
         bufdelete = { enabled = false },
-        dashboard = { enabled = false },
+        dashboard = {
+            enabled = true,
+            sections = {
+                { section = "header" },
+                { section = "keys", gap = 1 },
+                { icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = { 2, 2 } },
+                { icon = " ", title = "Projects", section = "projects", indent = 2, padding = 2 },
+                { section = "startup" },
+            },
+
+        },
         debug = { enabled = false },
         dim = { enabled = false },
         explorer = { enabled = false },
         git = { enabled = false },
         gitbrowse = { enabled = false },
-        image = { enabled = true },
+        image = {
+            enabled = true
+        },
         indent = { enabled = false },
-        input = { enabled = true },
+        input = {
+            enabled = true
+        },
         layout = { enabled = false },
         lazygit = { enabled = false },
-        notifier = { enabled = true },
-        picker = { enabled = true },
+        notifier = {
+            enabled = true
+        },
+        picker = {
+            enabled = true
+        },
         profiler = { enabled = false },
-        quickfile = { enabled = false },
+        quickfile = {
+            enabled = true
+        },
         rename = { enabled = false },
         scope = { enabled = false },
         scratch = { enabled = false },
@@ -32,8 +54,11 @@ return {
         zen = { enabled = false },
     },
     keys = {
-        { "<leader>f",  function() Snacks.picker.smart() end, desc = "Find Files" },
-        { "<leader>b",  function() Snacks.picker.buffers() end,    desc = "Search Buffers" },
-        { "<leader>lg", function() Snacks.picker.grep() end,  desc = "Open LiveGrep" },
+        -- Picker keybinds
+        { "<leader>f",  function() Snacks.picker.files() end,           desc = "Find Files" },
+        { "<leader>b",  function() Snacks.picker.buffers() end,         desc = "Search Buffers" },
+        { "<leader>lg", function() Snacks.picker.grep() end,            desc = "Open LiveGrep" },
+        { "<leader>ls", function() Snacks.picker.lsp_symbols() end,     desc = "Open LiveGrep" },
+        { "gr",         function() Snacks.picker.lsp_references() end,  desc = "Search References" }
     }
 }
