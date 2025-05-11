@@ -13,11 +13,11 @@ return {
             }
         })
 
-        vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end)
-        vim.keymap.set("n", "<leader>m", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+        vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end, { desc = "Add file to harpoon" })
+        vim.keymap.set("n", "<leader>m", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, { desc = "Open harpoon" })
 
-        for num = 1, 10 do
-            vim.keymap.set("n", "<leader>" .. num, function() harpoon:list():select(num) end)
+        for num = 1, 5 do
+            vim.keymap.set("n", "<leader>" .. num, function() harpoon:list():select(num) end, { desc = "Open harpoon file " .. num })
         end
     end
 }
