@@ -11,9 +11,8 @@ return {
             enabled = true,
             sections = {
                 { section = "header" },
-                { section = "keys", gap = 1 },
-                { icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = { 2, 2 } },
-                { icon = " ", title = "Projects", section = "projects", indent = 2, padding = 2 },
+                { section = "keys", gap = 1, padding = 1 },
+                { icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = { 1, 1 } },
                 { section = "startup" },
             },
 
@@ -55,10 +54,10 @@ return {
     },
     keys = {
         -- Picker keybinds
-        { "<leader>f",  function() Snacks.picker.files() end,           desc = "Find Files" },
-        { "<leader>b",  function() Snacks.picker.buffers() end,         desc = "Search Buffers" },
-        { "<leader>lg", function() Snacks.picker.grep() end,            desc = "Open LiveGrep" },
-        { "<leader>ls", function() Snacks.picker.lsp_symbols() end,     desc = "Open LSP Symbols" },
-        { "gr",         function() Snacks.picker.lsp_references() end,  desc = "Search References" }
+        { "<leader>f",  function() Snacks.picker.files() end,          desc = "Find Files" },
+        { "<leader>b",  function() Snacks.picker.buffers() end,        desc = "Search Buffers" },
+        { "<leader>lg", function() Snacks.picker.grep() end,           desc = "Open LiveGrep" },
+        { "<leader>ls", function() Snacks.picker.lsp_symbols() end,    desc = "Open LSP Symbols" },
+        { "gr",         function() Snacks.picker.lsp_references() end, desc = "Search References" }
     }
 }
