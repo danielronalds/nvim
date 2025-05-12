@@ -58,6 +58,7 @@ return {
         { "<leader>b",  function() Snacks.picker.buffers() end,        desc = "Search Buffers" },
         { "<leader>lg", function() Snacks.picker.grep() end,           desc = "Open LiveGrep" },
         { "<leader>ls", function() Snacks.picker.lsp_symbols() end,    desc = "Open LSP Symbols" },
-        { "gr",         function() Snacks.picker.lsp_references() end, desc = "Search References" }
+        { "gr",         function() Snacks.picker.lsp_references() end, desc = "Search References" },
+        { "<leader>ld", function() Snacks.picker.diagnostics() end,    desc = "Open Diagnostics" }
     }
 }
