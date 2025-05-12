@@ -4,12 +4,12 @@ return {
     opts = {
         keymap = {
             preset = 'default',
-            ['<CR>'] = { 'select_and_accept' },
+            ['<CR>'] = { 'select_and_accept', 'fallback' },
             ['<Tab>'] = { 'select_next', 'fallback' },
             ['<S-Tab>'] = { 'select_prev', 'fallback' },
         },
-        appearence = {
-            nerd_font_varient = "mono"
+        appearance = {
+            nerd_font_variant = "mono"
         },
         sources = {
             default = { 'lsp', 'path', 'snippets', 'buffer' },
