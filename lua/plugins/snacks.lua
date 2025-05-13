@@ -41,7 +41,7 @@ return {
         quickfile = {
             enabled = true
         },
-        rename = { enabled = false },
+        rename = { enabled = true },
         scope = { enabled = false },
         scratch = { enabled = false },
         scroll = { enabled = false },
@@ -60,5 +60,18 @@ return {
         { "<leader>ls", function() Snacks.picker.lsp_symbols() end,    desc = "Open LSP Symbols" },
         { "gr",         function() Snacks.picker.lsp_references() end, desc = "Search References" },
         { "<leader>ld", function() Snacks.picker.diagnostics() end,    desc = "Open Diagnostics" }
-    }
+    },
+    config = function(_, opts)
+        require("snacks").setup(opts)
+
+        -- Setting up oil intergration with renaming
+        vim.api.nvim_create_autocmd("User", {
+            pattern = "OilActionsPost",
+            callback = function(event)
+                if event.data.actions.type == "move" then
+                    Snacks.rename.on_rename_file(event.data.actions.src_url, event.data.actions.dest_url)
+                end
+            end,
+        })
+    end
 }
