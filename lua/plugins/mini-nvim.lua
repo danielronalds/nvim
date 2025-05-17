@@ -9,7 +9,10 @@ return {
         version = '*',
         opts = {},
         keys = {
-            { "<leader>tw", function() MiniTrailspace.trim() end, desc = "Trim Whitespace" }
+            { "<leader>tw", function()
+                MiniTrailspace.trim()
+                vim.notify("Trimmed whitespace")
+            end, desc = "Trim Whitespace" }
         }
     },
 }
