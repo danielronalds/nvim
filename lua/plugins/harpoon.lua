@@ -16,7 +16,7 @@ return {
 
         vim.keymap.set("n", "<leader>a", function()
             harpoon:list():add()
-            vim.notify("Added file to harpoon")
+            Snacks.notify.info("Added file to harpoon", { title = "Harpoon" })
         end, { desc = "Add file to harpoon" })
         vim.keymap.set("n", "<leader>m", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, { desc = "Open harpoon" })
 

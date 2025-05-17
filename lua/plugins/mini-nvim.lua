@@ -11,7 +11,7 @@ return {
         keys = {
             { "<leader>tw", function()
                 MiniTrailspace.trim()
-                vim.notify("Trimmed whitespace")
+                Snacks.notify.info("Trimmed whitespace", { title = "MiniTrailspace" })
             end, desc = "Trim Whitespace" }
         }
     },
