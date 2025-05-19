@@ -21,6 +21,7 @@ return {
                 vim.keymap.set("n", "<F4>", function() vim.lsp.buf.code_action() end, { desc = "Format file" })
                 vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end)
                 vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end)
+                vim.keymap.set("n", "<leader>d", function() vim.diagnostic.open_float() end, { desc = "Show diagnostic" })
             end
         })
     end,
