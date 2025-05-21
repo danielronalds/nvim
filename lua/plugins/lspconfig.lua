@@ -3,6 +3,7 @@ return {
     config = function()
         vim.lsp.enable({
             "lua_ls",
+            "solargraph",
             "rust_analyzer",
             "tailwindcss",
             "jdtls",
