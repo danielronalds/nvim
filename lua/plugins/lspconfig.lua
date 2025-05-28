@@ -18,7 +18,10 @@ return {
         vim.api.nvim_create_autocmd('LspAttach', {
             callback = function()
                 vim.keymap.set("n", "<F2>", function() vim.lsp.buf.rename() end, { desc = "Rename Symbol" })
-                vim.keymap.set("n", "<F3>", function() vim.lsp.buf.format() end, { desc = "Format file" })
+                vim.keymap.set("n", "<F3>", function()
+                    vim.lsp.buf.format()
+                    Snacks.notify.info("Formated Buffer", { title = "LSP" })
+                end, { desc = "Format file" })
                 vim.keymap.set("n", "<F4>", function() vim.lsp.buf.code_action() end, { desc = "Format file" })
                 vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end)
                 vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end)
