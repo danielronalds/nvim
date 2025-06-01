@@ -1,3 +1,18 @@
+-- Function for toggling virtual line diagnostics
+local function toggle_virtual_line_diagnostics()
+    local config = vim.diagnostic.config()
+
+    config.virtual_lines = not config.virtual_lines
+
+    vim.diagnostic.config(config)
+
+    if config.virtual_lines then
+        Snacks.notify.info("Enabled Virtual Lines", { title = "LSP" })
+    else
+        Snacks.notify.info("Disabled Virtual Lines", { title = "LSP" })
+    end
+end
+
 return {
     'neovim/nvim-lspconfig',
     config = function()
@@ -16,12 +31,8 @@ return {
         })
 
         vim.diagnostic.config({
-            -- Pick one
-            -- virtual_text = true,
-            virtual_lines = { current_line = true },
-
+            virtual_lines = false,
             underline = true,
-
             signs = {
                 text = {
                     [vim.diagnostic.severity.ERROR] = "󰅚 ",
@@ -42,7 +53,7 @@ return {
                 vim.keymap.set("n", "<F4>", function() vim.lsp.buf.code_action() end, { desc = "Format file" })
                 vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end)
                 vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end)
-                vim.keymap.set("n", "<leader>d", function() vim.diagnostic.open_float() end, { desc = "Show diagnostic" })
+                vim.keymap.set("n", "<leader>d", toggle_virtual_line_diagnostics, { desc = "Show diagnostic" })
             end
         })
     end,
