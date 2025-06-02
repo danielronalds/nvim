@@ -31,7 +31,7 @@ return {
         })
 
         vim.diagnostic.config({
-            virtual_lines = false,
+            virtual_lines = true,
             underline = true,
             signs = {
                 text = {
