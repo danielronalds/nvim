@@ -2,6 +2,7 @@
 local function toggle_virtual_line_diagnostics()
     local config = vim.diagnostic.config()
 
+    config.virtual_text = not config.virtual_text
     config.virtual_lines = not config.virtual_lines
 
     vim.diagnostic.config(config)
@@ -31,7 +32,7 @@ return {
         })
 
         vim.diagnostic.config({
-            virtual_lines = true,
+            virtual_text = true,
             underline = true,
             signs = {
                 text = {
