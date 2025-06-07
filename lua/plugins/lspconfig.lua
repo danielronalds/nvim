@@ -7,11 +7,8 @@ local function toggle_virtual_line_diagnostics()
 
     vim.diagnostic.config(config)
 
-    if config.virtual_lines then
-        Snacks.notify.info("Enabled Virtual Lines", { title = "LSP" })
-    else
-        Snacks.notify.info("Disabled Virtual Lines", { title = "LSP" })
-    end
+    local message = config.virtual_lines and "Enabled Virtual Lines" or "Disabled Virtual Lines"
+    Snacks.notify.info(message, { title = "LSP" })
 end
 
 return {
