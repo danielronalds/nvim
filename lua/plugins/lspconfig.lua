@@ -26,6 +26,7 @@ return {
             "nixd",
             "gopls",
             "clangd",
+            "templ",
         })
 
         vim.diagnostic.config({
