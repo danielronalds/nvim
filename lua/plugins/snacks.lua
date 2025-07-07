@@ -56,7 +56,7 @@ return {
         -- Picker keybinds
         { "<leader>f",  function() Snacks.picker.files() end,          desc = "Find Files" },
         { "<leader>b",  function() Snacks.picker.buffers() end,        desc = "Search Buffers" },
-        { "<leader>lg", function() Snacks.picker.grep() end,           desc = "Open LiveGrep" },
+        { "<leader>g", function() Snacks.picker.grep() end,           desc = "Open Grep" },
         { "<leader>ls", function() Snacks.picker.lsp_symbols() end,    desc = "Open LSP Symbols" },
         { "gr",         function() Snacks.picker.lsp_references() end, desc = "Search References" },
         { "<leader>ld", function() Snacks.picker.diagnostics() end,    desc = "Open Diagnostics" }
