@@ -19,7 +19,9 @@ return {
         },
         debug = { enabled = false },
         dim = { enabled = false },
-        explorer = { enabled = false },
+        explorer = {
+            enabled = true,
+        },
         git = { enabled = false },
         gitbrowse = { enabled = false },
         image = {
@@ -55,8 +57,9 @@ return {
     keys = {
         -- Picker keybinds
         { "<leader>f",  function() Snacks.picker.files() end,          desc = "Find Files" },
+        { "<leader>e",  function() Snacks.explorer() end,              desc = "File Explorer" },
         { "<leader>b",  function() Snacks.picker.buffers() end,        desc = "Search Buffers" },
-        { "<leader>g", function() Snacks.picker.grep() end,           desc = "Open Grep" },
+        { "<leader>g",  function() Snacks.picker.grep() end,           desc = "Open Grep" },
         { "<leader>ls", function() Snacks.picker.lsp_symbols() end,    desc = "Open LSP Symbols" },
         { "gr",         function() Snacks.picker.lsp_references() end, desc = "Search References" },
         { "<leader>ld", function() Snacks.picker.diagnostics() end,    desc = "Open Diagnostics" }
