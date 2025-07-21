@@ -1,3 +1,8 @@
+local function trimWhitespace()
+    MiniTrailspace.trim()
+    Snacks.notify.info("Trimmed whitespace", { title = "MiniTrailspace" })
+end
+
 return {
     {
         'echasnovski/mini.pairs',
@@ -8,11 +13,9 @@ return {
         'echasnovski/mini.trailspace',
         version = '*',
         opts = {},
+        event = { "BufReadPre", "BufNewFile" },
         keys = {
-            { "<leader>tw", function()
-                MiniTrailspace.trim()
-                Snacks.notify.info("Trimmed whitespace", { title = "MiniTrailspace" })
-            end, desc = "Trim Whitespace" }
+            { "<leader>tw", trimWhitespace, desc = "Trim Whitespace" }
         }
     },
 }
