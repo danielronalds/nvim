@@ -37,7 +37,13 @@ return {
             enabled = true
         },
         picker = {
-            enabled = true
+            enabled = true,
+            hidden = true,
+            sources = {
+                files = {
+                    hidden = true,
+                }
+            }
         },
         profiler = { enabled = false },
         quickfile = {
