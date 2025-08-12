@@ -29,6 +29,14 @@ return {
             "templ",
         })
 
+        -- Setting up angular
+        vim.lsp.config("angularls", {
+            cmd = { "ngserver", "--stdio", "--tsProbeLocations", "../..,?/node_modules", "--ngProbeLocations", "../../@angular/language-server/node_modules,?/node_modules/@angular/language-server/node_modules", "--angularCoreVersion", "" },
+            filetypes = { "typescript", "html", "typescriptreact", "typescript.tsx", "htmlangular" },
+            root_markers = { "angular.json" }
+        })
+        vim.lsp.enable("angularls")
+
         vim.diagnostic.config({
             virtual_text = true,
             underline = true,
