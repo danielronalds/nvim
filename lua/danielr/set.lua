@@ -21,6 +21,10 @@ vim.cmd[[set noswapfile]]
 
 -- Refresh buffer when changed externally
 vim.opt.autoread = true
+vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
+  command = "if mode() != 'c' | checktime | endif",
+  pattern = { "*" }
+})
 
 -- Hidden "https://medium.com/usevim/vim-101-set-hidden-f78800142855#:~:text=Typing%20%3Aset%20hidden%20will%20change,be%20hidden%20instead%20of%20closed"
 vim.opt.hidden = true
