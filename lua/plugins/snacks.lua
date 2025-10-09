@@ -66,6 +66,7 @@ return {
         { "<leader>e",  function() Snacks.explorer() end,              desc = "File Explorer" },
         { "<leader>b",  function() Snacks.picker.buffers() end,        desc = "Search Buffers" },
         { "<leader>g",  function() Snacks.picker.grep() end,           desc = "Open Grep" },
+        { "<leader>c",  function() Snacks.picker.git_status() end,           desc = "Open Changed Files" },
         { "<leader>ls", function() Snacks.picker.lsp_symbols() end,    desc = "Open LSP Symbols" },
         { "gr",         function() Snacks.picker.lsp_references() end, desc = "Search References" },
         { "<leader>ld", function() Snacks.picker.diagnostics() end,    desc = "Open Diagnostics" }
