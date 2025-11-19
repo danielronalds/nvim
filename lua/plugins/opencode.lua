@@ -4,6 +4,11 @@ return {
     config = function()
         vim.g.opencode_opts = {
             auto_reload = true,
+            provider = {
+                tmux = {
+                    options = "-h",
+                }
+            }
         }
     end,
     keys = {
