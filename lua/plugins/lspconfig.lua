@@ -27,6 +27,7 @@ return {
             "gopls",
             "clangd",
             "templ",
+            "elixirls"
         })
 
         vim.diagnostic.config({
