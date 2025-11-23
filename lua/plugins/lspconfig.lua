@@ -43,6 +43,8 @@ return {
             },
         })
 
+        vim.o.winborder = "rounded"
+
         vim.api.nvim_create_autocmd('LspAttach', {
             callback = function()
                 vim.keymap.set("n", "<F2>", function() vim.lsp.buf.rename() end, { desc = "Rename Symbol" })
