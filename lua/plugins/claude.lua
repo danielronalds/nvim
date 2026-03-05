@@ -19,14 +19,14 @@ return {
     })
   end,
   keys = {
-    { "<leader>a", nil, desc = "AI/Claude Code" },
-    { "<leader>ac", "<cmd>CodeBridgeTmux<cr>", desc = "Send file to Claude" },
-    { "<leader>ac", "<cmd>CodeBridgeTmux<cr>", mode = "v", desc = "Send selection to Claude" },
-    { "<leader>aa", "<cmd>CodeBridgeTmuxAll<cr>", desc = "Send all buffers to Claude" },
-    { "<leader>ai", "<cmd>CodeBridgeTmuxInteractive<cr>", desc = "Interactive send to Claude" },
-    { "<leader>ad", "<cmd>CodeBridgeTmuxDiff<cr>", desc = "Send diff to Claude" },
-    { "<leader>aD", "<cmd>CodeBridgeTmuxDiffStaged<cr>", desc = "Send staged diff to Claude" },
-    { "<leader>ae", "<cmd>CodeBridgeTmuxDiagnostics<cr>", desc = "Send diagnostics to Claude" },
-    { "<leader>ar", "<cmd>CodeBridgeTmuxRecent<cr>", desc = "Send recent files to Claude" },
+    { "<leader>c", nil, desc = "AI/Claude Code" },
+    { "<leader>cc", "<cmd>CodeBridgeTmux<cr>", desc = "Send file to Claude" },
+    { "<leader>cc", "<cmd>CodeBridgeTmux<cr>", mode = "v", desc = "Send selection to Claude" },
+    { "<leader>ca", "<cmd>CodeBridgeTmuxAll<cr>", desc = "Send all buffers to Claude" },
+    { "<leader>ci", "<cmd>CodeBridgeTmuxInteractive<cr>", desc = "Interactive send to Claude" },
+    { "<leader>cd", "<cmd>CodeBridgeTmuxDiff<cr>", desc = "Send diff to Claude" },
+    { "<leader>cD", "<cmd>CodeBridgeTmuxDiffStaged<cr>", desc = "Send staged diff to Claude" },
+    { "<leader>ce", "<cmd>CodeBridgeTmuxDiagnostics<cr>", desc = "Send diagnostics to Claude" },
+    { "<leader>cr", "<cmd>CodeBridgeTmuxRecent<cr>", desc = "Send recent files to Claude" },
   },
 }
