@@ -13,21 +13,14 @@ end
 
 return {
     'neovim/nvim-lspconfig',
+    dependencies = { "saghen/blink.cmp" },
     config = function()
-        vim.lsp.enable({
-            "lua_ls",
-            "solargraph",
-            "rust_analyzer",
-            "tailwindcss",
-            "jdtls",
-            "pyright",
-            "ts_ls",
-            "hls",
-            "nixd",
-            "gopls",
-            "clangd",
-            "templ",
-            "elixirls",
+        vim.lsp.config("*", {
+            capabilities = require("blink.cmp").get_lsp_capabilities(),
+        })
+
+        vim.lsp.config("ts_ls", {
+            filetypes = { "typescript", "javascript", "typescriptreact", "javascriptreact", "vue" },
         })
 
         vim.diagnostic.config({
