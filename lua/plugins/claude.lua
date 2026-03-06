@@ -21,7 +21,7 @@ return {
   keys = {
     { "<leader>c", nil, desc = "AI/Claude Code" },
     { "<leader>cc", "<cmd>CodeBridgeTmux<cr>", desc = "Send file to Claude" },
-    { "<leader>cc", "<cmd>CodeBridgeTmux<cr>", mode = "v", desc = "Send selection to Claude" },
+    { "<leader>cc", ":'<,'>CodeBridgeTmux<cr>", mode = "v", desc = "Send selection to Claude" },
     { "<leader>ca", "<cmd>CodeBridgeTmuxAll<cr>", desc = "Send all buffers to Claude" },
     { "<leader>ci", "<cmd>CodeBridgeTmuxInteractive<cr>", desc = "Interactive send to Claude" },
     { "<leader>cd", "<cmd>CodeBridgeTmuxDiff<cr>", desc = "Send diff to Claude" },
