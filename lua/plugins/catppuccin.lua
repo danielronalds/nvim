@@ -1,5 +1,6 @@
 return {
     "catppuccin/nvim",
+    enabled = require("danielr.platform").is_mac,
     lazy = false,
     priority = 1000,
     opts = {
