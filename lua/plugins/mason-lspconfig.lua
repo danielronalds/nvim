@@ -19,6 +19,7 @@ return {
             "templ",
             "elixirls",
             "vue_ls",
+            "intelephense",
         },
     },
 }
