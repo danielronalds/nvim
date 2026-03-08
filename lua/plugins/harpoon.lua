@@ -2,13 +2,14 @@ return {
     "ThePrimeagen/harpoon",
     branch = "harpoon2",
     dependencies = { "nvim-lua/plenary.nvim" },
-    config = function()
-        require("harpoon"):setup({
-            settings = {
-                save_on_toggle = true,
-                sync_on_ui_close = true,
-            }
-        })
+    opts = {
+        settings = {
+            save_on_toggle = true,
+            sync_on_ui_close = true,
+        },
+    },
+    config = function(_, opts)
+        require("harpoon"):setup(opts)
     end,
     keys = {
         { "<leader>a", function()
