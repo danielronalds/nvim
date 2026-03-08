@@ -3,39 +3,20 @@ return {
     priority = 1000,
     lazy = false,
     opts = {
-        bigfile = {
-            enabled = true
-        },
-        bufdelete = { enabled = false },
+        bigfile = { enabled = true },
         dashboard = {
             enabled = true,
             sections = {
                 { section = "header" },
                 { section = "keys", gap = 1, padding = 1 },
-                { icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = { 1, 1 } },
+                { icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = { 1, 1 } },
                 { section = "startup" },
             },
-
         },
-        debug = { enabled = false },
-        dim = { enabled = false },
-        explorer = {
-            enabled = true,
-        },
-        git = { enabled = false },
-        gitbrowse = { enabled = false },
-        image = {
-            enabled = true
-        },
-        indent = { enabled = false },
-        input = {
-            enabled = true
-        },
-        layout = { enabled = false },
-        lazygit = { enabled = false },
-        notifier = {
-            enabled = true
-        },
+        explorer = { enabled = true },
+        image = { enabled = true },
+        input = { enabled = true },
+        notifier = { enabled = true },
         picker = {
             enabled = true,
             hidden = true,
@@ -45,20 +26,8 @@ return {
                 }
             }
         },
-        profiler = { enabled = false },
-        quickfile = {
-            enabled = true
-        },
+        quickfile = { enabled = true },
         rename = { enabled = true },
-        scope = { enabled = false },
-        scratch = { enabled = false },
-        scroll = { enabled = false },
-        statuscolumn = { enabled = false },
-        terminal = { enabled = false },
-        toggle = { enabled = false },
-        win = { enabled = false },
-        words = { enabled = false },
-        zen = { enabled = false },
     },
     keys = {
         -- Picker keybinds
