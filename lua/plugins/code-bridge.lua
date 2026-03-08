@@ -1,5 +1,3 @@
-vim.keymap.set("n", "<leader>yf", ":let @+ = expand('%')<cr>", { desc = "Copy current buffer filepath" })
-
 return {
   "samir-roy/code-bridge.nvim",
   config = function()
