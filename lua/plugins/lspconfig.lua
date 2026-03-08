@@ -25,6 +25,7 @@ return {
 
         vim.diagnostic.config({
             virtual_text = true,
+            virtual_lines = false,
             underline = true,
             signs = {
                 text = {
@@ -39,16 +40,17 @@ return {
         vim.o.winborder = "rounded"
 
         vim.api.nvim_create_autocmd('LspAttach', {
-            callback = function()
-                vim.keymap.set("n", "<F2>", function() vim.lsp.buf.rename() end, { desc = "Rename Symbol" })
+            callback = function(args)
+                local opts = { buffer = args.buf }
+                vim.keymap.set("n", "<F2>", function() vim.lsp.buf.rename() end, vim.tbl_extend("force", opts, { desc = "Rename Symbol" }))
                 vim.keymap.set("n", "<F3>", function()
                     vim.lsp.buf.format()
-                    Snacks.notify.info("Formated Buffer", { title = "LSP" })
-                end, { desc = "Format file" })
-                vim.keymap.set("n", "<F4>", function() vim.lsp.buf.code_action() end, { desc = "Code Action" })
-                vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end)
-                vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end)
-                vim.keymap.set("n", "<leader>d", toggle_virtual_line_diagnostics, { desc = "Show diagnostic" })
+                    Snacks.notify.info("Formatted Buffer", { title = "LSP" })
+                end, vim.tbl_extend("force", opts, { desc = "Format file" }))
+                vim.keymap.set("n", "<F4>", function() vim.lsp.buf.code_action() end, vim.tbl_extend("force", opts, { desc = "Code Action" }))
+                vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
+                vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
+                vim.keymap.set("n", "<leader>d", toggle_virtual_line_diagnostics, vim.tbl_extend("force", opts, { desc = "Show diagnostic" }))
             end
         })
     end,
