@@ -28,3 +28,9 @@ vim.opt.incsearch = true
 
 -- Misc
 vim.opt.errorbells = false
+
+vim.filetype.add({
+    extension = {
+        cshtml = "razor",
+    },
+})
