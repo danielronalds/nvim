@@ -1,11 +1,9 @@
-local platform = require("danielr.platform")
-
 return {
     "nvim-lualine/lualine.nvim",
     opts = {
         options = {
             icons_enabled = true,
-            theme = platform.is_mac and "catppuccin" or "auto",
+            theme = "auto",
             --        component_separators = { left = '', right = ''},
             component_separators = { left = '', right = '' },
             --        section_separators = { left = '', right = ''},
