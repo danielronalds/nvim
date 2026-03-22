@@ -1,7 +1,7 @@
 -- Look and feel
 vim.opt.nu = true
 vim.opt.relativenumber = true
-vim.opt.colorcolumn = "100"
+vim.opt.colorcolumn = require("danielr.colorcolumn").get()
 vim.opt.scrolloff = 10
 vim.opt.signcolumn = "yes"
 

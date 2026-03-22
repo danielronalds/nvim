@@ -28,6 +28,16 @@ return {
         },
         quickfile = { enabled = true },
         rename = { enabled = true },
+        zen = {
+            enabled = true,
+            win = { width = 80 },
+            on_open = function()
+                vim.opt_local.colorcolumn = ""
+            end,
+            on_close = function()
+                vim.opt_local.colorcolumn = require("danielr.colorcolumn").get()
+            end,
+        },
     },
     keys = {
         -- Picker keybinds
@@ -38,7 +48,8 @@ return {
         { "<leader>G",  function() Snacks.picker.git_status() end,     desc = "Open Changed Files" },
         { "<leader>ls", function() Snacks.picker.lsp_symbols() end,    desc = "Open LSP Symbols" },
         { "gr",         function() Snacks.picker.lsp_references() end, desc = "Search References" },
-        { "<leader>ld", function() Snacks.picker.diagnostics() end,    desc = "Open Diagnostics" }
+        { "<leader>ld", function() Snacks.picker.diagnostics() end,    desc = "Open Diagnostics" },
+        { "<leader>r",  function() Snacks.zen() end,                  desc = "Reading Mode" }
     },
     config = function(_, opts)
         opts.dashboard.preset = {
