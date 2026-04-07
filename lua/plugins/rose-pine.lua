@@ -10,6 +10,7 @@ return {
         },
         highlight_groups = {
             Normal = { bg = "NONE" },
+            NormalNC = { bg = "NONE" },
             NormalFloat = { bg = "NONE" },
         },
     },
