@@ -14,7 +14,7 @@ return {
             },
         },
         explorer = { enabled = true },
-        image = { enabled = true },
+        image = { enabled = false },
         input = { enabled = true },
         notifier = { enabled = true },
         picker = {
