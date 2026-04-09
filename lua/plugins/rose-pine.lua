@@ -12,6 +12,7 @@ return {
             Normal = { bg = "NONE" },
             NormalNC = { bg = "NONE" },
             NormalFloat = { bg = "NONE" },
+            Visual = { bg = "gold" },
         },
     },
     config = function(_, opts)
