@@ -99,6 +99,12 @@ local function build_tree(files, cwd)
 end
 
 function M.open(pr)
+    local existing = Snacks.picker.get({ source = "pr_tree" })[1]
+    if existing then
+        existing:close()
+        return
+    end
+
     local files = get_pr_files(pr)
     if not files then return end
     if #files == 0 then
