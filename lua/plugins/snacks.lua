@@ -42,7 +42,12 @@ return {
     keys = {
         -- Picker keybinds
         { "<leader>f",  function() Snacks.picker.files() end,          desc = "Find Files" },
-        { "<leader>e",  function() Snacks.explorer() end,              desc = "File Explorer" },
+        { "<leader>e",  function()
+            for _, picker in ipairs(Snacks.picker.get()) do
+                if picker.opts.source ~= "explorer" then picker:close() end
+            end
+            Snacks.explorer()
+        end,                                                            desc = "File Explorer" },
         { "<leader>b",  function() Snacks.picker.buffers() end,        desc = "Search Buffers" },
         { "<leader>g",  function() Snacks.picker.grep() end,           desc = "Open Grep" },
         { "<leader>G",  function() Snacks.picker.git_status() end,     desc = "Open Changed Files" },
