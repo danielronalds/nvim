@@ -1,5 +1,6 @@
 return {
   "samir-roy/code-bridge.nvim",
+  enabled = false,
   config = function()
     local process_names = { "claude", "opencode" }
 
