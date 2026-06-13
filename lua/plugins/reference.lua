@@ -1,7 +1,7 @@
 return {
     "danielronalds/reference.nvim",
     config = function()
-      local process_names = { "claude", "opencode" }
+      local process_names = { "claude", "opencode", "pi" }
 
       local claude_version = vim.fn.system("claude -v 2>/dev/null"):match("^[%d%.]+") or ""
       if vim.v.shell_error == 0 and claude_version ~= "" then
