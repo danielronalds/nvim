@@ -6,5 +6,5 @@ Some key highlights of the config:
 
 + Almost excessive lazy loading of plugins
 + Platform specific theming (To support dynamic theme selection on Omarchy)
-+ AI CLI tooling integration via [code-bridge.nvim](https://github.com/samir-roy/code-bridge.nvim) plugin (with tmux)
++ AI CLI tooling integration via [reference.nvim](https://github.com/danielronalds/reference.nvim) plugin (with tmux)
 + Harpoon for quick file navigation
