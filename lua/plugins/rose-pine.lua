@@ -1,7 +1,6 @@
 return {
     "rose-pine/neovim",
     name = "rose-pine",
-    enabled = require("danielr.platform").is_mac,
     lazy = false,
     priority = 1000,
     opts = {
