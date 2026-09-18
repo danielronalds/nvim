@@ -9,6 +9,7 @@ return {
       end
 
       require("reference").setup({
+        driver = "wade",
         tmux = {
           process_names = process_names,
         },
