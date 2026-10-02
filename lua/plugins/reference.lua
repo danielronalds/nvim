@@ -9,7 +9,7 @@ return {
       end
 
       require("reference").setup({
-        driver = "wade",
+        driver = vim.env.WADE_WORKSPACE_ID and "wade" or nil,
         tmux = {
           process_names = process_names,
         },
